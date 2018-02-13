@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
+//mainClassName = 'hello.HelloWorld'
+
+ext {
+    crnkVersion = "2.5.20180205212522"
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile group: 'io.crnk', name: 'crnk-core', version: crnkVersion
+    compile group: 'io.crnk', name: 'crnk-spring', version: crnkVersion
+
+}
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
