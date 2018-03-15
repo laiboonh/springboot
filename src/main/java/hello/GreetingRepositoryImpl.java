@@ -23,6 +23,7 @@ public class GreetingRepositoryImpl extends ResourceRepositoryBase<Greeting, Lon
 
     @Override
     public synchronized ResourceList<Greeting> findAll(QuerySpec querySpec) {
-        return querySpec.apply(greetings.values());
+        //return querySpec.apply(greetings.values());
+        throw new BadRequestException("shit happens!");
     }
 }
