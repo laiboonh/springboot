@@ -9,10 +9,12 @@ public class Greeting {
     @JsonApiId
     private final long id;
     private final String content;
+    private final String country;
 
-    public Greeting(long id, String content) {
+    public Greeting(long id, String content, String country) {
         this.id = id;
         this.content = content;
+        this.country = country;
     }
 
     public long getId() {
@@ -23,8 +25,12 @@ public class Greeting {
         return content;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
     @Override
     public String toString() {
-        return "greeting[id=" + id + ", content=" + content + "]";
+        return "greeting[id=" + id + ", content=" + content +  ", country=" + country + "]";
     }
 }

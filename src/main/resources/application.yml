@@ -6,3 +6,8 @@ crnk:
 server:
   context-path: /springboot
   port: 9090
+
+properties:
+  countryMap:
+    SG: Singapore
+    HK: HongKong

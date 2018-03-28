@@ -16,9 +16,9 @@ public class GreetingRepositoryImpl extends ResourceRepositoryBase<Greeting, Lon
     public GreetingRepositoryImpl() {
         super(Greeting.class);
 
-        greetings.put(1L, new Greeting(1L, "Hello Alice!"));
-        greetings.put(2L, new Greeting(2L, "Hello Bob!"));
-        greetings.put(3L, new Greeting(3L, "Hello Mary!"));
+        greetings.put(1L, new Greeting(1L, "Hello Alice!", "Singapore"));
+        greetings.put(2L, new Greeting(2L, "Hello Bob!", "Thailand"));
+        greetings.put(3L, new Greeting(3L, "Hello Mary!", "China"));
     }
 
     @Override
